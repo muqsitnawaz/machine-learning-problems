@@ -23,9 +23,9 @@ for iter = 1:num_iters
 
     cost_error = X*theta - y;
 
-    for i=1:num_features
-        delta(i) = (1/m)*cost_error'*X(:, i);
-        theta(i) = theta(i) - alpha*delta(i);
+    for j=1:num_features
+        delta(j) = (1/m)*cost_error'*X(:, j);
+        theta(j) = theta(j) - alpha*delta(j);
     end
 
 
