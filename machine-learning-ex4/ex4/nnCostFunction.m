@@ -40,7 +40,7 @@ Theta2_grad = zeros(size(Theta2));
 %         computed in ex4.m
 
 
-y = eye(num_labels)(y,:);					% size(y) : [5000 x 10]
+y = eye(num_labels)(y,:);			% size(y) : [5000 x 10]
 
 a1 = [ones(m, 1), X];;				% size(a1) : [5000 x 401]					
 a2 = sigmoid(a1*Theta1');			% size(a2) : results in [5000 * 25]'
@@ -80,7 +80,6 @@ J = J + cost_reg;
 % initializing variables
 Delta1 = 0;
 Delta2 = 0;
-
 
 for t=1:m
 	% step 1
