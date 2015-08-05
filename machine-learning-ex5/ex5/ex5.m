@@ -173,7 +173,8 @@ plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
 plotFit(min(X), max(X), mu, sigma, theta, p);
 xlabel('Change in water level (x)');
 ylabel('Water flowing out of the dam (y)');
-title (sprintf('Polynomial Regression Fit (lambda = %f)', lambda));
+title (sprintf('Polynomial Regression Fit (lambda = %f)\n', lambda));
+fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 figure(2);
