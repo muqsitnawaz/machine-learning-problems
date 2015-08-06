@@ -49,7 +49,8 @@ x = zeros(n, 1);
 %
 
 
-
+disp(size(word_indices));
+x(word_indices) = 1;
 
 
 
