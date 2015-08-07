@@ -103,13 +103,13 @@ pause;
 %  You should now complete the code in kMeansInitCentroids.m
 %
 
-fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
+fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');	%'
 
 %  Load an image of a bird
-A = double(imread('bird_small.png'));
+%A = double(imread('bird_small.png'));
 
 % If imread does not work for you, you can try instead
-%   load ('bird_small.mat');
+   load ('bird_small.mat');
 
 A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
 

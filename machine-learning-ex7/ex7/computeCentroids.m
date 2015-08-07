@@ -27,7 +27,11 @@ centroids = zeros(K, n);
 %
 
 for k=1:K
-	centroids(k, :) = mean(X(find(idx == k), :));
+	meanval = mean(X(find(idx == k), :));
+	
+	if (size(meanval))
+		centroids(k, :) = meanval;
+	endif
 end
 
 % =============================================================
