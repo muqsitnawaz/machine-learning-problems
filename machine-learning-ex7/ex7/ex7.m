@@ -75,7 +75,7 @@ pause;
 fprintf('\nRunning K-Means clustering on example dataset.\n\n');
 
 % Load an example dataset
-load('ex7data2.mat');
+load('ex7data2.mat');					% '
 
 % Settings for running K-Means
 K = 3;
