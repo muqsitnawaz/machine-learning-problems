@@ -24,9 +24,8 @@ sigma2 = zeros(n, 1);
 for i=1:n
 	mu(i) = mean(X(:, i));
 	sigma2(i) = std(X(:, i));
+	sigma2(i) = (1/m)*sumsq(X(:, i) - mu(i));
 end
-
-
 
 
 % =============================================================

@@ -26,15 +26,17 @@ for epsilon = min(pval):stepsize:max(pval)
 
     yexp = zeros(size(yval));
     yexp(find(pval < epsilon)) = 1;
+    yexp = (pval < epsilon);
 
-    tp = size(find(yval(find(yexp == 1)) == 1), 2);
-    fp = size(find(yval(find(yexp == 1)) == 0), 2);
-    fn = size(find(yval(find(yexp == 0)) == 1), 2);
+    tp = length(find(yval(find(yexp == 1)) == 1));
+    fp = length(find(yval(find(yexp == 1)) == 0));
+    fn = length(find(yval(find(yexp == 0)) == 1));
 
-    prec = tp/(tp  + fp);
-    rec = tp/(tp  + fn);
-
-    F1 = (2*prec*rec)/(prec + rec);
+    if tp > 0
+        prec = tp/(tp  + fp);
+        rec = tp/(tp  + fn);
+        F1 = (2*prec*rec)/(prec + rec);
+    end
 
     % =============================================================
 
@@ -43,8 +45,5 @@ for epsilon = min(pval):stepsize:max(pval)
        bestEpsilon = epsilon;
     end
 end
-
-disp(bestEpsilon);
-disp(bestF1);
 
 end
