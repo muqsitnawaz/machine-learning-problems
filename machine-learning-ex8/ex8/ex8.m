@@ -82,6 +82,8 @@ fprintf('   (you should see a value epsilon of about 8.99e-05)\n\n');
 
 %  Find the outliers in the training set and plot the
 outliers = find(p < epsilon);
+fprintf('# Outliers found: %d\n', length(outliers));
+
 
 %  Draw a red circle around those outliers
 hold on
